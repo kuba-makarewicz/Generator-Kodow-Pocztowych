@@ -16,13 +16,9 @@ def generator(kod1, kod2):
     kod_temp = str(kod_temp)
     kod_temp = kod_temp.split(", ")
 
-    l = range(len(kod_temp))
+    l = range(1,len(kod_temp))
     #Wstawienie "-" do kodów pocztowych
     for i in l:
         temp = kod_temp[i][:2] + '-' + kod_temp[i][2:]
         kod_final.append(temp)
-    print(kod_final[1:])
-
-kod1 = "79-900"
-kod2 = "80-155"
-generator(kod1,kod2)
+    return(kod_final)
